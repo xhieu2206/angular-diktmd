@@ -12,7 +12,21 @@ export class ProductAlertsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges() {
+    console.log(`CLOG "ngOnChanges": `, null);
   }
 
+  ngOnInit(): void {
+    console.log(`CLOG "ngOnInit": `, null);
+  }
+
+  ngDoCheck() {
+    // được call ngay lập tức sau khi `ngOnChanges` mỗi khi có change detection run, và ngay sau `ngOnInit` ở lần chạy đầu tiên
+    console.log(`CLOG "ngDoCheck": `, null);
+  }
+
+  ngAfterContentInit() {
+    // call sau `ngDoCheck`
+    console.log(`CLOG "ngAfterContentInit": `, null);
+  }
 }

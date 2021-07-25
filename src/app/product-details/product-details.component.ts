@@ -10,6 +10,7 @@ import { CartService } from '../cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;
+
   constructor(
     private route: ActivatedRoute, // contains những information về route và
     // route's parameters. Bằng cách inject `ActivatedRoute`, chúng ta có thể
